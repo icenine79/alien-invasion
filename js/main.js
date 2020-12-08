@@ -58,25 +58,25 @@ function animateDiv() {
   $('.a').animate({
     top: newq[0],
     left: newq[1]
-  }, 1000, function () {
+  }, 5000, function () {
     animateDiv();
   });
   $('.b').animate({
     bottom: x[0],
     left: x[1]
-  }, 2000, function () {
+  }, 5000, function () {
     animateDiv();
   });
   $('.c').animate({
     top: y[0],
     left: y[1]
-  }, 500, function () {
+  }, 5000, function () {
     animateDiv();
   });
   $('.d').animate({
     top: z[0],
     left: z[1]
-  }, 1000, function () {
+  }, 5000, function () {
     animateDiv();
   });
 };
