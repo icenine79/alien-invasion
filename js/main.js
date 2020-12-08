@@ -7,12 +7,21 @@ $(document).ready(function () {
   let music = new Audio('./sounds/intro-music.wav');
   let ufo = new Audio('./sounds/ufos.ogg');
   let shot = new Audio('./sounds/laser-shot.mp3');
+  var flames1 = $('#flames1').hide();
+  var flames2 = $('#flames2').hide();
+  var flames3 = $('#flames3').hide();
+  var flames4 = $('#flames4').hide();
+let ufo1 = $('#ufo1');
+
+
+var ufo1Lives=6
+
   $('#start').click(function () {
     intro.fadeOut(500, function () {
       game.fadeIn(5000)
       animateDiv();
-      ufo.play();
-      music.play();
+      //ufo.play();
+      //music.play();
     })
   })
   music.addEventListener("ended", function () {
@@ -28,11 +37,16 @@ game.click(function(){
   shot.play();
   bullets--;
 })
+ufo1.click(function(){
+  score++
+  ufo1Lives--;
+  console.log('hit')
+  console.log(score)
+  if(ufo1Lives<=3){
+    flames1.fadeIn();
+  }
 
-
-
-
-
+});
 
 });
 
@@ -54,17 +68,18 @@ function animateDiv() {
   var x = makeNewPosition();
   var y = makeNewPosition();
   var z = makeNewPosition();
+  var b = makeNewPosition();
 
   $('.a').animate({
     top: newq[0],
     left: newq[1]
-  }, 5000, function () {
+  }, 15000, function () {
     animateDiv();
   });
   $('.b').animate({
     bottom: x[0],
     left: x[1]
-  }, 5000, function () {
+  }, 500, function () {
     animateDiv();
   });
   $('.c').animate({
@@ -79,7 +94,10 @@ function animateDiv() {
   }, 5000, function () {
     animateDiv();
   });
+  $('.e').animate({
+    top: b[1],
+    left: b[0]
+  }, 1000, function () {
+    animateDiv();
+  });
 };
-$(document).ready(function () {
-
-})

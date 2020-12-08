@@ -156,7 +156,6 @@ textarea {
 position: absolute;
 z-index:-1;
 top:-112px;
-opacity:0.5;
 }
 #flames2{
   position: absolute;
@@ -189,7 +188,17 @@ opacity:0.5;
 .test {
   cursor: auto;
 
-  cursor:url(../img/scope.gif),4,12 auto;
+  cursor:url(../img/scope.png), auto;
+}
+
+
+
+#boss1{
+  width: 200px;
+  height:200px;
+  position:fixed;
+  opacity:0.5;
+
 }
 /* ==========================================================================
    Helper classes
