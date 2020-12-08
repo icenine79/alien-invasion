@@ -117,7 +117,13 @@ textarea {
     opacity:0.5;
 
     }
+button:hover{
+  cursor: pointer;
 
+}
+.btn{
+  padding:30px !important;
+}
     .bg {
       background-image:url(../img/space-game.jpg);
       height: 100vh;
@@ -127,6 +133,17 @@ textarea {
       background-size: cover;
       background-color: #6C5A56;
       background-blend-mode: multiply;
+    }
+    .level-two-bg{
+      background-image:url(../img/level2.jpg);
+      height: 100vh;
+       background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #6C5A56;
+      background-blend-mode: multiply;
+
     }
     .bg-intro {
       background-image:url(../img/space-intro.jpg);
@@ -152,27 +169,17 @@ textarea {
       color:red;
       font-size:60px;
     }
-#flames1{
+#flames1, #flames2, #flames3, #flames4, #level2-flames1,  #level2-flames2,  #level2-flames3,  #level2-flames4{
 position: absolute;
 z-index:-1;
 top:-112px;
 }
-#flames2{
+#explosion1, #explosion2, #explosion3, #explosion4, #level2-explosion1, #level2-explosion2, #level2-explosion3, #level2-explosion4{
   position: absolute;
   z-index:-1;
-  top:-112px;
-
+  top:-60px;
   }
-  #flames3{
-    position: absolute;
-    z-index:-1;
-    top:-112px;
-    }
-    #flames4{
-      position: absolute;
-      z-index:-1;
-      top:-112px;
-      }
+
 .asteroid{
   position: absolute;
   z-index: 999;
@@ -182,10 +189,10 @@ top:-112px;
 }
 @-webkit-keyframes move {
   0% { left: 0;}
-  50%{ left : 50%;}
+  50%{ left : 90%;}
   100%{ left: 0;}
 }
-.test {
+.scope {
   cursor: auto;
 
   cursor:url(../img/scope.png), auto;
