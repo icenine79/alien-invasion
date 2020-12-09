@@ -111,12 +111,24 @@ textarea {
 
     }
     div.d {
-    width: 200px;
-    height:200px;
+    width: 800px;
+    height:600px;
     position:fixed;
     opacity:0.5;
 
     }
+#bossFlames{
+  top:-320px;
+  position:absolute;
+  z-index: -1;
+}
+#bossExplosion{
+  top:-320;
+  position:absolute;
+  z-index:1;
+  left:2px;
+}
+
 button:hover{
   cursor: pointer;
 
@@ -169,12 +181,12 @@ button:hover{
       color:red;
       font-size:60px;
     }
-#flames1, #flames2, #flames3, #flames4, #level2-flames1,  #level2-flames2,  #level2-flames3,  #level2-flames4{
+#flames1, #flames2, #flames3  {
 position: absolute;
 z-index:-1;
 top:-112px;
 }
-#explosion1, #explosion2, #explosion3, #explosion4, #level2-explosion1, #level2-explosion2, #level2-explosion3, #level2-explosion4{
+#explosion1, #explosion2, #explosion3{
   position: absolute;
   z-index:-1;
   top:-60px;
@@ -184,14 +196,39 @@ top:-112px;
   position: absolute;
   z-index: 999;
   -webkit-animation:linear infinite alternate;
-    -webkit-animation-name: move;
+    -webkit-animation-name: asteroid;
     -webkit-animation-duration: 5s;
 }
-@-webkit-keyframes move {
+.asteroid2{
+  width:50%;
+  top:350px;
+  left:50%;
+  position: absolute;
+  z-index: 999;
+}
+.asteroid3{
+  top:150px;
+  left:50%;
+  position: absolute;
+  z-index: 999;
+  -webkit-animation:linear infinite alternate;
+  -webkit-animation-name: asteroid2;
+  -webkit-animation-duration: 2s;
+}
+@-webkit-keyframes asteroid {
   0% { left: 0;}
   50%{ left : 90%;}
   100%{ left: 0;}
 }
+@-webkit-keyframes asteroid2 {
+  from {
+    top: 0;
+}
+to {
+    bottom: 100%;
+}
+}
+
 .scope {
   cursor: auto;
 
